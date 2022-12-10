@@ -6,35 +6,27 @@ using UnityEngine.Networking;
 
 public class ShowCards : MonoBehaviour
 {
-    public GameObject[] cards;
-    public GameObject[] cardsBack;
 
+[SerializeField] Dropdown dropdown;
+[SerializeField] CardsManager cardsManager;
 
-       void Start()
+    public void ButtonClick()
     {
-       OneByOne();   
+ 
+      if(dropdown.value == 0){
+    cardsManager.AllAtOnceStart(); 
+         }; 
+      if(dropdown.value == 1){
+     cardsManager.OneByOneStart();
+         }; 
+      if(dropdown.value == 2){
+     cardsManager.CardsPositionBackFunction();
+         }; 
     }
     
-  public void OneByOne(){
-         StartCoroutine(Sequence());
-    }
-    private IEnumerator Sequence()
-    {    
-        
-         for(int i = 0; i < cardsBack.Length; i++){
-            
-            for (float j = 0f; j <= 180f; j += 10f)
-            {
-                yield return new WaitForSeconds(0.1f);
-                cards[i].transform.rotation = Quaternion.Euler(0f, j, 0f);
-                if (j == 90f)
-                {
-                    cardsBack[i].SetActive(true);
-                }
-               
-            }
-        }
-    }
+  void Update(){
+
+}
        
    }
    

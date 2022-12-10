@@ -198,42 +198,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110604529}
   m_CullTransparentMesh: 1
---- !u!1 &114973048
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 114973049}
-  m_Layer: 5
-  m_Name: Buttons
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &114973049
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114973048}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 161563157}
-  m_Father: {fileID: 1583133418}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -148, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &130176134
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +207,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 130176136}
-  - component: {fileID: 130176135}
   m_Layer: 0
   m_Name: CardsLoadManager
   m_TagString: Untagged
@@ -251,20 +214,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &130176135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130176134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6154a7a1bfecd14f98a07c777e0366c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  url: https://picsum.photos/200/300
-  isLoaded: 0
 --- !u!4 &130176136
 Transform:
   m_ObjectHideFlags: 0
@@ -291,8 +240,9 @@ GameObject:
   - component: {fileID: 161563160}
   - component: {fileID: 161563159}
   - component: {fileID: 161563158}
+  - component: {fileID: 161563161}
   m_Layer: 5
-  m_Name: All At Once
+  m_Name: Load
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,12 +260,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1610304762}
-  m_Father: {fileID: 114973049}
-  m_RootOrder: 0
+  m_Father: {fileID: 1583133418}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46, y: 142}
+  m_AnchoredPosition: {x: -102, y: 142}
   m_SizeDelta: {x: 108.9, y: 18.0841}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &161563158
@@ -362,9 +312,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 161563161}
         m_TargetAssemblyTypeName: ShowCards, Assembly-CSharp
-        m_MethodName: AllAtOnce
+        m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -412,6 +362,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161563156}
   m_CullTransparentMesh: 1
+--- !u!114 &161563161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161563156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f72ec3613c779e439d1076db798bb5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 228664096}
+  cardsManager: {fileID: 1099310909}
 --- !u!1 &228664094
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,8 +414,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: 144}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -236.11946, y: 144}
+  m_SizeDelta: {x: 112.2389, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228664096
 MonoBehaviour:
@@ -499,7 +463,7 @@ MonoBehaviour:
   m_CaptionImage: {fileID: 0}
   m_ItemText: {fileID: 2137770324}
   m_ItemImage: {fileID: 0}
-  m_Value: 0
+  m_Value: 2
   m_Options:
     m_Options:
     - m_Text: All At Once
@@ -510,7 +474,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CardsManager, Assembly-CSharp
+        m_MethodName: ChangeNumber
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &228664097
 MonoBehaviour:
@@ -1940,7 +1916,7 @@ RectTransform:
   - {fileID: 1598042919}
   - {fileID: 432916743}
   - {fileID: 1214322052}
-  - {fileID: 114973049}
+  - {fileID: 161563157}
   - {fileID: 228664095}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -2743,7 +2719,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: All At Once
+  m_Text: Option C
 --- !u!222 &1970705275
 CanvasRenderer:
   m_ObjectHideFlags: 0
