@@ -18,16 +18,34 @@ public LoadImage[] lI;
 
 
 
-public void OneByOneStart(){
-  StartCoroutine(OneByOne());
-}
+public void WaitingAllAtOnce ()
+    {
+      CardsPositionBackFunction();
+      Invoke("AllAtOnceStart",2f);   
+    }
+
+public void WaitingOneByOne ()
+    {
+      CardsPositionBackFunction();
+      Invoke("OneByOneStart",2f);   
+    }
+
 public void AllAtOnceStart(){
   StartCoroutine(AllAtOnce());
 }
 
+public void OneByOneStart(){
+  StartCoroutine(OneByOne());
+}
+
+
 public void CardsPositionBackFunction(){
   StartCoroutine(CardsPositionBack());
 }
+
+
+
+
 
       IEnumerator AllAtOnce()
     {
@@ -63,8 +81,8 @@ public void CardsPositionBackFunction(){
        
     IEnumerator CardsPositionBack(){
      for(int i = 0; i < 4; i++){
-      tween = cardsBack[i].transform.DORotate(new Vector3(0,90,0), 0.9f); 
-      tween = images[i].transform.DORotate(new Vector3(0,90,0), 0.9f); 
+      tween = cardsBack[i].transform.DORotate(new Vector3(0,90,0), 0.7f); 
+      tween = images[i].transform.DORotate(new Vector3(0,90,0), 0.7f); 
      }
       yield return new WaitForSeconds(1f);
       for(int i = 0; i < 4; i++){
