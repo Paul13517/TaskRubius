@@ -43,19 +43,15 @@ public void CardsPositionBackFunction(){
   StartCoroutine(CardsPositionBack());
 }
 
-
-
-
-
       IEnumerator AllAtOnce()
     {
       for(int i = 0; i < 4; i++){
         tween = cards[i].transform.DORotate(new Vector3(0,-90,0), 0.9f);
-           lI[i].StartLoading();
+        lI[i].StartLoading();
          } 
          
         yield return new WaitForSeconds(1f);
-        for(int i = 0; i < cards.Length; i++){
+      for(int i = 0; i < cards.Length; i++){
         cardsBack[i].SetActive(true);
         images[i].enabled = true;
         }
@@ -71,8 +67,8 @@ public void CardsPositionBackFunction(){
          } 
          
         
-        for(int i = 0; i < cards.Length; i++){
-          yield return new WaitForSeconds(0.1f);
+      for(int i = 0; i < 4; i++){
+        yield return new WaitForSeconds(0.1f);
         cardsBack[i].SetActive(true);
         images[i].enabled = true;
         }

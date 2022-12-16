@@ -1583,7 +1583,7 @@ GameObject:
   - component: {fileID: 1425443289}
   - component: {fileID: 1425443288}
   m_Layer: 5
-  m_Name: CardExample (3)
+  m_Name: FrontCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1724,7 +1724,7 @@ GameObject:
   - component: {fileID: 1573166508}
   - component: {fileID: 1573166507}
   m_Layer: 5
-  m_Name: CardExample (2)
+  m_Name: FrontCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2476,7 +2476,7 @@ GameObject:
   - component: {fileID: 1848771288}
   - component: {fileID: 1848771287}
   m_Layer: 5
-  m_Name: CardExample
+  m_Name: FrontCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2551,7 +2551,7 @@ GameObject:
   - component: {fileID: 1925592832}
   - component: {fileID: 1925592831}
   m_Layer: 5
-  m_Name: CardExample (1)
+  m_Name: FrontCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
