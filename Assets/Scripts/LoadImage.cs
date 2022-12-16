@@ -9,8 +9,7 @@ public class LoadImage : MonoBehaviour
    [SerializeField] private string url;
    private Image img;
 
-    //public Image[] img;
-    public bool isLoaded = false;
+
     
 
     public void StartLoading()

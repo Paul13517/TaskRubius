@@ -198,36 +198,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110604529}
   m_CullTransparentMesh: 1
---- !u!1 &130176134
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 130176136}
-  m_Layer: 0
-  m_Name: CardsLoadManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &130176136
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130176134}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69.2637, y: 131.28378, z: 644.432}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &161563156
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropdown: {fileID: 228664096}
   cardsManager: {fileID: 1099310909}
+  exitAFree: 1
 --- !u!1 &228664094
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,8 +440,6 @@ MonoBehaviour:
     - m_Text: All At Once
       m_Image: {fileID: 0}
     - m_Text: OneByOne
-      m_Image: {fileID: 0}
-    - m_Text: Option C
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -839,7 +808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   url: https://picsum.photos/200/300
-  isLoaded: 0
 --- !u!114 &579141006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,7 +935,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   url: https://picsum.photos/200/300
-  isLoaded: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,7 +1367,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214322051
 GameObject:
@@ -1491,7 +1458,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   url: https://picsum.photos/200/300
-  isLoaded: 0
 --- !u!114 &1339765911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2244,7 +2210,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   url: https://picsum.photos/200/300
-  isLoaded: 0
 --- !u!114 &1730290087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2719,7 +2684,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option C
+  m_Text: OneByOne
 --- !u!222 &1970705275
 CanvasRenderer:
   m_ObjectHideFlags: 0

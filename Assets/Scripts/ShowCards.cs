@@ -29,9 +29,7 @@ public bool exitAFree = true;
          else if(dropdown.value == 1){
           cardsManager.WaitingOneByOne ();
          }
-     /* if(dropdown.value == 2){
-     cardsManager.CardsPositionBackFunction();
-         }; */
+ 
     }
     
        
